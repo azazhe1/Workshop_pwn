@@ -4,23 +4,18 @@
 #include <sys/types.h>
 #include <unistd.h>
  
-void win() {
-    printf("You did it, can you feel the Force ?\n");
-    system("cat flag.txt");
-}
- 
-void lose() {
-    printf("May the force be with you\n");
+void get_shell() {
+    printf("GGG You win\n");
+    system("/bin/bash");
 }
 
 void func(){
     char buf[128];
-    printf("What is your name young padawan?");
+    printf("Input: ");
     fgets(buf,200,stdin);
 }
  
 void main()
 {
     func();
-    lose();
 }
